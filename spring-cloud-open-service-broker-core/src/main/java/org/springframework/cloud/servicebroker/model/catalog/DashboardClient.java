@@ -17,6 +17,7 @@
 package org.springframework.cloud.servicebroker.model.catalog;
 
 import java.util.Objects;
+import java.io.Serializable;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
@@ -31,7 +32,8 @@ import com.fasterxml.jackson.databind.annotation.JsonNaming;
  */
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class DashboardClient {
+public class DashboardClient implements Serializable {
+	private static final long serialVersionUID = 1L;
 
 	private final String id;
 

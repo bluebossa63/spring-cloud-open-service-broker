@@ -19,6 +19,7 @@ package org.springframework.cloud.servicebroker.model.catalog;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.io.Serializable;
 
 import javax.validation.constraints.NotEmpty;
 
@@ -36,7 +37,9 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
  * @author Scott Frederick
  */
 @JsonInclude(Include.NON_NULL)
-public class Plan {
+public class Plan implements Serializable  {
+	
+	private static final long serialVersionUID = 1L;
 
 	@NotEmpty
 	private final String id;

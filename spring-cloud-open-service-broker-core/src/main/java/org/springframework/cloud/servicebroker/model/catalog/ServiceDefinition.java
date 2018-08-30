@@ -24,6 +24,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Collectors;
+import java.io.Serializable;
 
 import javax.validation.constraints.NotEmpty;
 
@@ -43,7 +44,9 @@ import com.fasterxml.jackson.databind.annotation.JsonNaming;
  */
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class ServiceDefinition {
+public class ServiceDefinition implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
 
 	@NotEmpty
 	private final String id;

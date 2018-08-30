@@ -27,6 +27,9 @@ import java.util.Map;
  * @author Scott Frederick
  */
 public final class KubernetesContext extends Context {
+	
+	private static final long serialVersionUID = 1L;
+	
 	public static final String KUBERNETES_PLATFORM = "kubernetes";
 	public static final String NAMESPACE_KEY = "namespace";
 

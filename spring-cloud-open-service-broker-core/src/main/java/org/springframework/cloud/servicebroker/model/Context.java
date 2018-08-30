@@ -19,6 +19,7 @@ package org.springframework.cloud.servicebroker.model;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.io.Serializable;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
@@ -38,7 +39,10 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 		@JsonSubTypes.Type(value = CloudFoundryContext.class, name = CloudFoundryContext.CLOUD_FOUNDRY_PLATFORM),
 		@JsonSubTypes.Type(value = KubernetesContext.class, name = KubernetesContext.KUBERNETES_PLATFORM),
 })
-public class Context {
+public class Context implements Serializable  {
+	
+	private static final long serialVersionUID = 1L;
+	
 	protected final String platform;
 
 	@JsonAnySetter

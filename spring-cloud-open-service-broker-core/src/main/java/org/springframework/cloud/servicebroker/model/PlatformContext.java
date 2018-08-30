@@ -24,6 +24,8 @@ import java.util.Map;
  * @author Scott Frederick
  */
 public class PlatformContext extends Context {
+	
+	private static final long serialVersionUID = 1L;
 
 	private PlatformContext() {
 		super(null, null);

@@ -17,7 +17,7 @@
 package org.springframework.cloud.servicebroker.model.catalog;
 
 import java.util.Objects;
-
+import java.io.Serializable;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -32,7 +32,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * @author Sam Gunaratne
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Schemas {
+public class Schemas implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
 
 	@JsonProperty("service_instance")
 	private final ServiceInstanceSchema serviceInstanceSchema;

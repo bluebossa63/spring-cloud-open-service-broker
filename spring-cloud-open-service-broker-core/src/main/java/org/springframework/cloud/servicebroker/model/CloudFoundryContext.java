@@ -30,6 +30,9 @@ import com.fasterxml.jackson.databind.annotation.JsonNaming;
  */
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public final class CloudFoundryContext extends Context {
+	
+	private static final long serialVersionUID = 1L;
+	
 	public static final String CLOUD_FOUNDRY_PLATFORM = "cloudfoundry";
 	public static final String ORGANIZATION_GUID_KEY = "organizationGuid";
 	public static final String SPACE_GUID_KEY = "spaceGuid";

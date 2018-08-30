@@ -16,10 +16,13 @@
 
 package org.springframework.cloud.servicebroker.model.catalog;
 
+
+import java.io.Serializable;
 /**
  * The list of acceptable values for the <code>requires</code> field of a service definition.
  */
-public enum ServiceDefinitionRequires {
+public enum ServiceDefinitionRequires  {
+	
 	/**
 	 * Indicates that the service broker allows the platform to stream logs from bound applications to a
 	 * service instance. If this permission is provided in a service definition, the broker should provide a
